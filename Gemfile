@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'gibbon'
-gem 'sucker_punch'
+gem 'sucker_punch', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'
