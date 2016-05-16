@@ -15,9 +15,9 @@ class MailingListSignupJob < ActiveJob::Base
 	    result = mailchimp.lists(list_id).members.create(
 	      body: {
 	        email_address: user.email,
-	        status: 'subscribed'
+	        status: 'subscribed',
 	        interests: Hash[interest_id, true]
-	    })
+	       })
 	  else
 	  	result = mailchimp.lists(list_id).members.create(
 	  		body: {

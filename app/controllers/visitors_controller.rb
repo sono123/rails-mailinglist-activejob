@@ -1,5 +1,5 @@
 class VisitorsController < ApplicationController
-	protect_from_forgery except: create
+	protect_from_forgery except: :create
 
 	def new
 		@visitor = Visitor.new

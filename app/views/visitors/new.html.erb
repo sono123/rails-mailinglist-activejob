@@ -8,6 +8,7 @@
     <div class="form-centered">
       <%= simple_form_for @visitor do |f| %>
         <%= f.error_notification %>
+        <%= f.hidden_field :affinity %>
         <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
         <br/>
         <%= f.button :submit, "Sign up for the mailing list", :class => "submit" %>
@@ -15,3 +16,5 @@
     </div>
   </div>
 </section>
+
+
