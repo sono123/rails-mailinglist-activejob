@@ -9,6 +9,7 @@
       <%= simple_form_for @visitor do |f| %>
         <%= f.error_notification %>
         <%= f.hidden_field :affinity %>
+        <%= f.hidden_field :referrer %>
         <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
         <br/>
         <%= f.button :submit, "Sign up for the mailing list", :class => "submit" %>
@@ -16,5 +17,17 @@
     </div>
   </div>
 </section>
+
+<br>
+<br>
+<br>
+
+<div class="row">
+  <div class="col-4-sm col-sm-offset-4">
+    <h4>HTTP_REFERER is: <%= request.env["HTTP_REFERER"] %> </h4>
+    <h4>@visitor.referrer is: <%= @visitor.referrer %> </h4>
+  </div>
+</div>
+
 
 
